@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condom Delivery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Condom Delivery</h1>
+
+    <div class="free-badge">
+        🎉 All condoms are FREE for students!
+    </div>
+
+    <p class="free-note">
+        This service is provided at no cost to support your health, safety, and wellbeing.
+    </p>
+
+    <p>
+        Welcome! Please fill in the form below to place your confidential order.
+    </p>
+
+    <!-- ORDER FORM -->
+    <form id="orderForm">
+        <label>Full Name</label>
+        <input type="text" id="name" required>
+
+        <label>Residential Name</label>
+        <input type="text" id="residence" placeholder="e.g. Maple Residence" required>
+
+        <label>Room Number</label>
+        <input type="text" id="room" required>
+
+        <label>Number of Condoms</label>
+        <input type="number" id="quantity" min="1" required>
+
+        <label>Condom Flavor</label>
+        <select id="flavor" required>
+            <option value="">Select Flavor</option>
+            <option>Classic</option>
+            <option>Strawberry</option>
+            <option>Chocolate</option>
+            <option>Mint</option>
+            <option>Vanilla</option>
+        </select>
+
+        <button type="submit">Place Order</button>
+    </form>
+
+    <div class="message" id="thankYouMessage"></div>
+
+    <!-- ADMIN SECTION -->
+    <div class="admin">
+        <button onclick="showAdminLogin()">Admin View</button>
+
+        <div id="adminLogin">
+            <label>Admin Password</label>
+            <input type="password" id="adminPassword">
+            <button onclick="checkPassword()">Login</button>
+            <p id="adminError"></p>
+        </div>
+
+        <div id="adminPanel">
+            <h3>Placed Orders</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Residence</th>
+                        <th>Room</th>
+                        <th>Quantity</th>
+                        <th>Flavor</th>
+                    </tr>
+                </thead>
+                <tbody id="ordersTable"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

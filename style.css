@@ -1,0 +1,169 @@
+/* RESET & BASE */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f6f8;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+/* MAIN CONTAINER */
+.container {
+    max-width: 500px;
+    width: 100%;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* HEADINGS & TEXT */
+h1 {
+    text-align: center;
+    color: #e63946;
+    font-size: 2rem;
+}
+
+p {
+    text-align: center;
+    color: #555;
+    font-size: 1rem;
+}
+
+/* FORM */
+label {
+    font-weight: bold;
+    margin-top: 12px;
+    display: block;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+/* BUTTONS */
+button {
+    background-color: #e63946;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d62839;
+}
+
+/* MESSAGES */
+.message {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+    color: green;
+}
+
+/* ADMIN SECTION */
+.admin {
+    margin-top: 30px;
+}
+
+#adminLogin,
+#adminPanel {
+    display: none;
+}
+
+#adminError {
+    color: red;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f1f1f1;
+}
+
+/* MAKE TABLE SCROLLABLE ON SMALL SCREENS */
+.admin table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+/* 📱 SMALL PHONES */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    input, select, button {
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+}
+
+/* 📱 TABLETS */
+@media (min-width: 481px) and (max-width: 768px) {
+    .container {
+        max-width: 600px;
+    }
+}
+
+/* 💻 LAPTOPS & DESKTOPS */
+@media (min-width: 769px) {
+    .container {
+        max-width: 550px;
+    }
+}
+/* FREE CONDOM MESSAGE */
+.free-badge {
+    background-color: #e63946;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.free-note {
+    text-align: center;
+    color: #444;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+/* Adjust FREE badge for small devices */
+@media (max-width: 480px) {
+    .free-badge {
+        font-size: 1rem;
+        padding: 8px;
+    }
+}
